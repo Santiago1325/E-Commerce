@@ -44,6 +44,12 @@ INSTALLED_APPS = [
     'apps.Genero',
     'apps.Plataforma',
     'apps.Vehiculo',
+    'apps.Domiciliario',
+    'apps.Carrito_de_Compra',
+    'apps.Direccion',
+    'apps.Entrega',
+    'apps.Videojuego',
+    'apps.Genero_Videojuego',
 ]
 
 MIDDLEWARE = [
