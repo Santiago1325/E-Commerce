@@ -136,6 +136,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+LOGIN_REDIRECT_URL = '/registro/'
+LOGOUT_REDIRECT_URL = '/'
+
 TEMPLATES = [
  {
  'BACKEND': 'django.template.backends.django.DjangoTemplates',
