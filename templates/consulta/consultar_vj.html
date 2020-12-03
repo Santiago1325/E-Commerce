@@ -26,6 +26,14 @@
  <td>{{ videojuego.Multijugador}}</td>
  <td>{{ videojuego.Costo }}</td>
  <td>{{ videojuego.Nombre }}</td>
+  <td>
+
+   {% if user.groups.all.0.name != 'Cliente' %}
+    <a href="{% url 'editarJuego' videojuego.Codigo %}"><i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Editar juego {{ videojuego.Nombre }}"></i></a>
+    <a href="{% url 'eliminarJuego' videojuego.Codigo %}"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Eliminar"></i></a>
+   {% endif %}
+
+  </td>
  </tr>
  {% endfor %}
  {% endif %}

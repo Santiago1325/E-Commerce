@@ -30,3 +30,11 @@ def crearJuego(request):
     else:
         form = VideojuegoForm()
     return render(request, 'registro/crearJuego.html', {'form':form})
+
+def eliminarJuego(request, id_j):
+    videojuego = Videojuego.objects.get(Codigo=id_j)
+    if request.method == 'POST':
+        videojuego.delete()
+        return consultarJuegos(request)
+    else:
+        return render(request, 'edicion/eliminarJuego.html',{'videojuego':videojuego})
