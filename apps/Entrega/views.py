@@ -13,3 +13,8 @@ def crearEntrega(request):
     else:
         form = EntregaForm()
     return render(request, 'registro/crearEntrega.html', {'form':form})
+
+def consultarEntrega(request):
+    entregas = Entrega.objects.all()
+    contexto = {'entregas':entregas}
+    return render(request, 'consulta/consulta_entrega.html', contexto)
