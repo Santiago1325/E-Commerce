@@ -11,15 +11,13 @@
     <div class="col-6">
         <div class="card">
             <div class="card-header">
-                <h3>Carrito de compra</h3>
+                <h3>Crear Entrega</h3>
             </div>
             <div class="card-body">
                 <form method="post">
                     {% csrf_token %}
-                    <div class="alert alert-warning" role="alert">
-                        Esta seguro que desea comprar el juego {{ videojuego.Nombre }}
-                    </div>
-                    <a href="{% url 'crearEntrega' %}">Comprar Juego</a>
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-primary">Crear</button>
                 </form>
             </div>
         </div>
@@ -27,4 +25,3 @@
   </div>
 </div>
 {% endblock %}
-

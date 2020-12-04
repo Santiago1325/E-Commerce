@@ -15,6 +15,7 @@
  <th>ID</th>
  <th>Nombre</th>
  <th>Apellido</th>
+   <th>Placa Vehiculo</th>
  </tr>
  </thead>
  <tbody>
@@ -24,6 +25,8 @@
  <td>{{ domiciliario.ID_Domiciliario }}</td>
  <td>{{ domiciliario.Nombre}}</td>
  <td>{{ domiciliario.Apellido}}</td>
+  <td>{{ domiciliario.Placa_Vehiculo.Placa}}</td>
+
   <td>
 
    {% if user.groups.all.0.name != 'Cliente' %}

@@ -8,14 +8,12 @@ class DomiciliarioForm(forms.ModelForm):
             'ID_Domiciliario',
             'Nombre',
             'Apellido',
+            'Placa_Vehiculo'
         ]
-        fields = {
-            'ID_Domiciliario':'ID_Domiciliario',
-            'Nombre':'Nombre',
-            'Apellido':'Apellido',
-        }
+
         widgets = {
             'ID_Domiciliario':forms.TextInput(attrs={'class':'form-control'}),
             'Nombre':forms.TextInput(attrs={'class':'form-control'}),
             'Apellido':forms.TextInput(attrs={'class':'form-control'}),
+            'Placa_Vehiculo':forms.TextInput(attrs={'class':'form-control'}),
         }

@@ -16,6 +16,8 @@
  <th>Multijugador</th>
  <th>Costo</th>
  <th>Nombre</th>
+  <th>Clasificacion de Edad</th>
+   <th>Desarrollador</th>
  </tr>
  </thead>
  <tbody>
@@ -26,6 +28,9 @@
  <td>{{ videojuego.Multijugador}}</td>
  <td>{{ videojuego.Costo }}</td>
  <td>{{ videojuego.Nombre }}</td>
+    <td>{{ videojuego.ID_Clasificacion_de_edad.Nombre }}</td>
+  <td>{{ videojuego.ID_Desarrollador.Nombre }}</td>
+
   <td>
 
    {% if user.groups.all.0.name != 'Cliente' %}
@@ -34,7 +39,7 @@
    {% endif %}
 
    {% if user.groups.all.0.name == 'Cliente' %}
-       <a href="#"><i class="fas fa-shopping-cart" data-toggle="tooltip" data-placement="bottom" title="Comprar {{ videojuego.Nombre }}"></i></a>
+       <a href="{% url 'crearCompra' videojuego.Codigo%}"><i class="fas fa-shopping-cart" data-toggle="tooltip" data-placement="bottom" title="Comprar {{ videojuego.Nombre }}"></i></a>
    {% endif %}
   </td>
  </tr>

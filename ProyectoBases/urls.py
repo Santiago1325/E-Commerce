@@ -25,5 +25,6 @@ urlpatterns = [
     path('accounts/',  include('django.contrib.auth.urls')),
     path('edicion/', include('apps.Videojuego.urls')),
     path('consulta/',include('apps.Domiciliario.urls')),
-    path('registro/', include('apps.Carrito_de_Compra.urls'))
+    path('registro/', include('apps.Carrito_de_Compra.urls')),
+    path('registro/', include('apps.Entrega.urls')),
 ]
