@@ -33,6 +33,9 @@
     <a href="{% url 'eliminarJuego' videojuego.Codigo %}"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Eliminar"></i></a>
    {% endif %}
 
+   {% if user.groups.all.0.name == 'Cliente' %}
+       <a href="#"><i class="fas fa-shopping-cart" data-toggle="tooltip" data-placement="bottom" title="Comprar {{ videojuego.Nombre }}"></i></a>
+   {% endif %}
   </td>
  </tr>
  {% endfor %}

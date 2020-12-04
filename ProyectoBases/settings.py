@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.Desarrollador',
     'apps.Clasificacion_Edad',
     'apps.Franquicia',
+    'apps.Factura',
     'apps.Genero',
     'apps.Plataforma',
     'apps.Vehiculo',

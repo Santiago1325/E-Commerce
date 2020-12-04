@@ -8,7 +8,7 @@ from django.contrib import admin
 
 class Factura(models.Model):
     ID_Factura = models.IntegerField(primary_key=True)
-    Valor_Total = models.IntegerField(primary_key=True)
+    Valor_Total = models.IntegerField()
     Metodo_De_Pago = models.CharField(max_length=45)
     ID_Carrito_Carrito_De_Compras = models.ForeignKey(Carrito_de_Compra, on_delete=models.CASCADE)
     Codigo_Video_Juegos = models.ForeignKey(Videojuego, on_delete=models.CASCADE)
